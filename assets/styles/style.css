@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  background-color: white;
+  max-width: 450px;
+  width: 100%;
+  padding: 20px;
+  margin: 45px auto 15px;
+  border: 1px #cfcfcf solid;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.form-control {
+  width: 100%;
+  margin: 0 0 8px;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  display: block;
+  font: inherit;
+  font-size: 14px;
+  width: 100%;
+  padding: 12px;
+  margin: 4px auto 0;
+  border: 1px #b8b8b8 solid;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 240ms ease-in-out;
+}
+
+small {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 4px;
+  color: #f81414;
+  visibility: hidden;
+}
+
+.form-control.error input,
+.form-control.error select {
+  border-color: #f81414;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+select {
+  display: block;
+  font: inherit;
+  font-size: 14px;
+  width: 100%;
+  padding: 12px;
+  margin: 4px auto 0;
+  border: 1px #b8b8b8 solid;
+  border-radius: 10px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #404040;
+}
+
+.generate {
+  display: block;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  padding: 14px 18px;
+  margin: 12px auto 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.link-box {
+  border: 1px black dashed;
+  font-size: 14px;
+  padding: 10px;
+  margin: 25px auto 0;
+  width: 100%;
+  border-radius: 12px;
+  overflow-wrap: break-word;
+  display: none;
+}
+
+.link-box.show {
+  display: block;
+}
+
+.copy {
+  display: block;
+  background-color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 12px;
+  margin: 10px auto 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.hint-box {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  padding: 10px;
+  height: 40px;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  transform: translate(-50%);
+  margin-bottom: -50px;
+  transition: margin-bottom 200ms ease-in;
+}
+
+.hint-box.show {
+  margin-bottom: 0;
+}
+
+@media (hover: hover) {
+  .generate:hover {
+    background-color: #4b4b4b;
+  }
+
+  .copy:hover {
+    background-color: #b4b4b4;
+  }
+}
+
+@media (hover: none) {
+  .generate:active {
+    transition: none;
+    background-color: #4b4b4b;
+  }
+
+  .copy:active {
+    transition: none;
+    background-color: #b4b4b4;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 95%;
+    border: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>LRQA Attendance</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="full-name">Full name</label>
+          <input type="text" id="full-name" name="fullname" />
+          <small>Please enter a valid name</small>
+        </div>
+        <div class="form-control">
+          <label for="roll-number">Roll number</label>
+          <input type="text" id="roll-number" name="rollnumber" />
+          <small>Please enter a valid roll number</small>
+        </div>
+        <div class="form-control">
+          <label for="dept">Department</label>
+          <select name="dept" id="dept">
+            <option value="none" disabled selected>Select a department</option>
+            <option value="CSE C">CSE C</option>
+            <option value="CSE D">CSE D</option>
+            <option value="IT A">IT A</option>
+            <option value="IT B">IT B</option>
+            <option value="MECH A">MECH A</option>
+            <option value="MECH C">MECH C</option>
+            <option value="MECH D">MECH D</option>
+            <option value="CIVIL B">CIVIL B</option>
+            <option value="CIVIL C">CIVIL C</option>
+          </select>
+          <small>Please select a department</small>
+        </div>
+        <button class="generate" type="submit">Generate</button>
+      </form>
+      <div id="link-box" class="link-box">
+        <p id="link-content"></p>
+        <button id="copy" class="copy">Copy</button>
+      </div>
+      <div id="hint-box" class="hint-box">
+        <p>Copied to clipboard</p>
+      </div>
+    </div>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>
